@@ -1,12 +1,14 @@
 import { ThemeType } from "@/mui/themes";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-type UIStateType = {
+export type UIStateType = {
 	appTheme: ThemeType;
+	customization: {};
 };
 
 const initialState: UIStateType = {
 	appTheme: "light",
+	customization: {},
 };
 
 const uiStateSlice = createSlice({

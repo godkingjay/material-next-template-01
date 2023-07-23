@@ -1,5 +1,6 @@
 import { ThemeOptions, createTheme } from "@mui/material";
-import ComponentOverride from "./componentOverride";
+import { UIStateType } from "@/redux/reducers/uiStateReducer";
+import componentOverride from "./componentOverride";
 
 export type ThemeType = "light" | "dark";
 
@@ -12,10 +13,10 @@ const AppThemes: Record<ThemeType, ThemeOptions> = {
 	dark: darkTheme,
 };
 
-const setupTheme = (type: ThemeType) => {
+const setupTheme = (uiState: UIStateType) => {
 	const theme = createTheme({
-		...AppThemes[type],
-		components: ComponentOverride,
+		...AppThemes[uiState.appTheme],
+		components: componentOverride(uiState.customization),
 	});
 
 	return theme;
