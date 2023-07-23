@@ -10,7 +10,7 @@ type MaterialUIProviderProps = {
 };
 
 const MaterialUIProvider: React.FC<MaterialUIProviderProps> = (props) => {
-	const { appTheme } = useAppSelector((state) => state.uiState);
+	const uiState = useAppSelector((state) => state.uiState);
 
 	return (
 		<>
@@ -22,7 +22,7 @@ const MaterialUIProvider: React.FC<MaterialUIProviderProps> = (props) => {
 					position: "relative",
 				}}
 			>
-				<ThemeProvider theme={setupTheme(appTheme)}>
+				<ThemeProvider theme={setupTheme(uiState)}>
 					<CssBaseline />
 					{props.children}
 				</ThemeProvider>
