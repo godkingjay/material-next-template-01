@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import { useAppSelector } from "../redux/hooks";
 import { AppThemes } from "./themes";
 
@@ -14,8 +14,9 @@ const MaterialUIProvider: React.FC<MaterialUIProviderProps> = (props) => {
 
 	return (
 		<>
-			<main
-				style={{
+			<Box
+				component="main"
+				sx={{
 					height: "100vh",
 					minHeight: "100vh",
 					position: "relative",
@@ -25,7 +26,7 @@ const MaterialUIProvider: React.FC<MaterialUIProviderProps> = (props) => {
 					<CssBaseline />
 					{props.children}
 				</ThemeProvider>
-			</main>
+			</Box>
 		</>
 	);
 };
