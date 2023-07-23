@@ -3,7 +3,7 @@
 import React from "react";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import { useAppSelector } from "../redux/hooks";
-import { AppThemes } from "./themes";
+import { setupTheme } from "./themes";
 
 type MaterialUIProviderProps = {
 	children: React.ReactNode;
@@ -22,7 +22,7 @@ const MaterialUIProvider: React.FC<MaterialUIProviderProps> = (props) => {
 					position: "relative",
 				}}
 			>
-				<ThemeProvider theme={AppThemes[appTheme]}>
+				<ThemeProvider theme={setupTheme(appTheme)}>
 					<CssBaseline />
 					{props.children}
 				</ThemeProvider>

@@ -1,4 +1,5 @@
-import { ThemeOptions } from "@mui/material";
+import { ThemeOptions, createTheme } from "@mui/material";
+import ComponentOverride from "./componentOverride";
 
 export type ThemeType = "light" | "dark";
 
@@ -11,4 +12,13 @@ const AppThemes: Record<ThemeType, ThemeOptions> = {
 	dark: darkTheme,
 };
 
-export { AppThemes };
+const setupTheme = (type: ThemeType) => {
+	const theme = createTheme({
+		...AppThemes[type],
+		components: ComponentOverride,
+	});
+
+	return theme;
+};
+
+export { AppThemes, setupTheme };
