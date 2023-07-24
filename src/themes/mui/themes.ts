@@ -4,22 +4,28 @@ import componentOverride from "./componentOverride";
 
 export type ThemeType = "light" | "dark";
 
-const defaultTheme: ThemeOptions = {};
+const defaultTheme = (uiState: UIStateType): ThemeOptions => {
+	return {};
+};
 
-const darkTheme: ThemeOptions = {};
+const darkTheme = (uiState: UIStateType): ThemeOptions => {
+	return {};
+};
 
-const AppThemes: Record<ThemeType, ThemeOptions> = {
-	light: defaultTheme,
-	dark: darkTheme,
+const appThemes = (uiState: UIStateType): Record<ThemeType, ThemeOptions> => {
+	return {
+		light: defaultTheme(uiState),
+		dark: darkTheme(uiState),
+	};
 };
 
 const setupTheme = (uiState: UIStateType) => {
 	const theme = createTheme({
-		...AppThemes[uiState.appTheme],
+		...appThemes(uiState)[uiState.appTheme],
 		components: componentOverride(uiState.customization),
 	});
 
 	return theme;
 };
 
-export { AppThemes, setupTheme };
+export { appThemes, setupTheme };
