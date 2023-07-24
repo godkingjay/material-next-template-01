@@ -31,6 +31,6 @@ const uiStateSlice = createSlice({
 	},
 });
 
-export const { setAppTheme } = uiStateSlice.actions;
+export const { setAppTheme, setBorderRadius } = uiStateSlice.actions;
 
 export default uiStateSlice.reducer;

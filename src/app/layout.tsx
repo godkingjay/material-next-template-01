@@ -3,6 +3,7 @@ import React from "react";
 import type { Metadata } from "next";
 import MaterialUIProvider from "@/mui/MaterialUIProvider";
 import ReduxProvider from "@/redux/ReduxProvider";
+import { useAppSelector } from "../redux/hooks";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
