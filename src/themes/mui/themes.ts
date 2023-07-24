@@ -4,12 +4,12 @@ import componentOverride from "./componentOverride";
 
 export type ThemeType = "light" | "dark";
 
-const lightTheme: ThemeOptions = {};
+const defaultTheme: ThemeOptions = {};
 
 const darkTheme: ThemeOptions = {};
 
 const AppThemes: Record<ThemeType, ThemeOptions> = {
-	light: lightTheme,
+	light: defaultTheme,
 	dark: darkTheme,
 };
 
