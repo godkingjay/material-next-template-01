@@ -1,4 +1,4 @@
-import { ThemeType } from "@/mui/themes";
+import { ThemeType } from "@/themes/mui/themes";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export type UIStateType = {
