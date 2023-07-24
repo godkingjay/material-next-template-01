@@ -1,9 +1,8 @@
 import "./globals.scss";
 import React from "react";
 import type { Metadata } from "next";
-import MaterialUIProvider from "@/mui/MaterialUIProvider";
-import ReduxProvider from "@/redux/ReduxProvider";
-import { useAppSelector } from "../redux/hooks";
+import ReduxProvider from "@/providers/ReduxProvider";
+import MaterialUIProvider from "@/providers/MaterialUIProvider";
 
 export const metadata: Metadata = {
 	title: "Create Next App",

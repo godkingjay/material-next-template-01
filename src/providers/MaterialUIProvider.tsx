@@ -2,8 +2,8 @@
 
 import React from "react";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
-import { useAppSelector } from "../redux/hooks";
-import { setupTheme } from "./themes";
+import { useAppSelector } from "@/redux/hooks";
+import { setupTheme } from "../themes/mui/themes";
 
 type MaterialUIProviderProps = {
 	children: React.ReactNode;
