@@ -14,6 +14,13 @@ const componentOverride = (
 				},
 			},
 		},
+		MuiPaper: {
+			styleOverrides: {
+				root: {
+					borderRadius: customization.borderRadius + "px",
+				},
+			},
+		},
 	};
 };
 
