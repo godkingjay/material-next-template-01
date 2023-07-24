@@ -3,12 +3,16 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export type UIStateType = {
 	appTheme: ThemeType;
-	customization: {};
+	customization: {
+		borderRadius: number;
+	};
 };
 
 const initialState: UIStateType = {
 	appTheme: "light",
-	customization: {},
+	customization: {
+		borderRadius: 8,
+	},
 };
 
 const uiStateSlice = createSlice({
@@ -17,6 +21,12 @@ const uiStateSlice = createSlice({
 	reducers: {
 		setAppTheme: (state, action: PayloadAction<UIStateType["appTheme"]>) => {
 			state.appTheme = action.payload;
+		},
+		setBorderRadius: (
+			state,
+			action: PayloadAction<UIStateType["customization"]["borderRadius"]>
+		) => {
+			state.customization.borderRadius = action.payload;
 		},
 	},
 });
