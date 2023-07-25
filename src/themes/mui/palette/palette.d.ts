@@ -9,6 +9,8 @@ export type AppThemeColorPaletteType = {
 	palette: {
 		MuiListItemButton: {
 			root: ButtonColorType;
+			light: ButtonColorType;
+			dark: ButtonColorType;
 		};
 	};
 };

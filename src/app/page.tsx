@@ -11,6 +11,7 @@ import { GoHome } from "react-icons/go";
 import { HiOutlineUser } from "react-icons/hi";
 import { IoSettingsOutline } from "react-icons/io5";
 import React from "react";
+import { grey } from "@mui/material/colors";
 
 export default function Home() {
 	return (
@@ -71,6 +72,37 @@ export default function Home() {
 						<List
 							sx={{
 								px: 1,
+							}}
+						>
+							<ListItemButton>
+								<ListItemIcon>
+									<GoHome />
+								</ListItemIcon>
+								<ListItemText>Item Button 1</ListItemText>
+							</ListItemButton>
+							<ListItemButton>
+								<ListItemIcon>
+									<HiOutlineUser />
+								</ListItemIcon>
+								<ListItemText>Item Button 2</ListItemText>
+							</ListItemButton>
+							<ListItemButton>
+								<ListItemIcon>
+									<IoSettingsOutline />
+								</ListItemIcon>
+								<ListItemText>Item Button 3</ListItemText>
+							</ListItemButton>
+						</List>
+					</Paper>
+					<Paper
+						sx={{
+							overflow: "hidden",
+						}}
+					>
+						<List
+							sx={{
+								px: 1,
+								backgroundColor: grey["900"],
 							}}
 						>
 							<ListItemButton>

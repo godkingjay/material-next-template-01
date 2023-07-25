@@ -28,30 +28,33 @@ const componentOverride = (uiState: UIStateType): ThemeOptions["components"] => 
 					fontSize: "18px",
 					paddingBlock: "8px",
 					paddingInline: "20px",
-					color: appThemeColorPalette.palette.MuiListItemButton.root.color,
+					color: appThemeColorPalette.palette.MuiListItemButton["dark"].color,
 
 					"&:focus": {
 						backgroundColor:
-							appThemeColorPalette.palette.MuiListItemButton.root.focus
+							appThemeColorPalette.palette.MuiListItemButton["root"].focus
 								?.backgroundColor,
 						color:
-							appThemeColorPalette.palette.MuiListItemButton.root.focus?.color,
+							appThemeColorPalette.palette.MuiListItemButton["root"].focus
+								?.color,
 					},
 
 					"&:hover": {
 						backgroundColor:
-							appThemeColorPalette.palette.MuiListItemButton.root.hover
+							appThemeColorPalette.palette.MuiListItemButton["root"].hover
 								?.backgroundColor,
 						color:
-							appThemeColorPalette.palette.MuiListItemButton.root.hover?.color,
+							appThemeColorPalette.palette.MuiListItemButton["root"].hover
+								?.color,
 					},
 
 					"& .Mui-selected": {
 						backgroundColor:
-							appThemeColorPalette.palette.MuiListItemButton.root.active
+							appThemeColorPalette.palette.MuiListItemButton["root"].active
 								?.backgroundColor,
 						color:
-							appThemeColorPalette.palette.MuiListItemButton.root.active?.color,
+							appThemeColorPalette.palette.MuiListItemButton["root"].active
+								?.color,
 					},
 
 					"& .MuiListItemIcon-root": {
