@@ -21,6 +21,14 @@ const componentOverride = (
 				},
 			},
 		},
+		MuiListItemButton: {
+			styleOverrides: {
+				root: {
+					borderRadius: customization.borderRadius + "px",
+					paddingBlock: "8px",
+				},
+			},
+		},
 	};
 };
 

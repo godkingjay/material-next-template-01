@@ -1,8 +1,7 @@
 import { ThemeOptions, createTheme } from "@mui/material";
 import { UIStateType } from "@/redux/reducers/uiStateReducer";
 import componentOverride from "./componentOverride";
-
-export type ThemeType = "light" | "dark";
+import { ThemeType } from "@/themes/theme";
 
 const defaultTheme = (uiState: UIStateType): ThemeOptions => {
 	return {};

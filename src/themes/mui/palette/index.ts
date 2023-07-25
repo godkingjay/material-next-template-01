@@ -1,15 +1,7 @@
-import { ThemeType } from "../themes";
+import { AppThemeColorPaletteType } from "./palette";
 
-type AppColorsType = Record<string, string>;
-type AppPaletteType = {
-	[key: string]: Record<ThemeType, string>;
+const AppThemeColorPalette: AppThemeColorPaletteType = {
+	palette: {},
 };
-
-type AppThemeColorPaletteType = {
-	colors?: AppColorsType;
-	palette?: AppPaletteType;
-};
-
-const AppThemeColorPalette: AppThemeColorPaletteType = {};
 
 export default AppThemeColorPalette;
