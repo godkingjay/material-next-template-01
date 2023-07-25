@@ -1,7 +1,7 @@
 import { ThemeOptions } from "@mui/material";
 import { UIStateType } from "@/redux/reducers/uiStateReducer";
 
-import AppThemeColorPalette from "../palette";
+import appThemeColorPalette from "../palette";
 
 const componentOverride = (uiState: UIStateType): ThemeOptions["components"] => {
 	return {
@@ -28,6 +28,31 @@ const componentOverride = (uiState: UIStateType): ThemeOptions["components"] => 
 					fontSize: "18px",
 					paddingBlock: "8px",
 					paddingInline: "20px",
+					color: appThemeColorPalette.palette.MuiListItemButton.root.color,
+
+					"&:focus": {
+						backgroundColor:
+							appThemeColorPalette.palette.MuiListItemButton.root.focus
+								?.backgroundColor,
+						color:
+							appThemeColorPalette.palette.MuiListItemButton.root.focus?.color,
+					},
+
+					"&:hover": {
+						backgroundColor:
+							appThemeColorPalette.palette.MuiListItemButton.root.hover
+								?.backgroundColor,
+						color:
+							appThemeColorPalette.palette.MuiListItemButton.root.hover?.color,
+					},
+
+					"& .Mui-selected": {
+						backgroundColor:
+							appThemeColorPalette.palette.MuiListItemButton.root.active
+								?.backgroundColor,
+						color:
+							appThemeColorPalette.palette.MuiListItemButton.root.active?.color,
+					},
 
 					"& .MuiListItemIcon-root": {
 						minWidth: "40px",

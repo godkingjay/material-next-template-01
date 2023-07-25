@@ -1,5 +1,5 @@
 export interface BaseColorType {
-	background?: React.CSSProperties["backgroundColor"];
-	text?: React.CSSProperties["color"];
-	border?: React.CSSProperties["borderColor"];
+	backgroundColor?: React.CSSProperties["backgroundColor"];
+	color?: React.CSSProperties["color"];
+	borderColor?: React.CSSProperties["borderColor"];
 }
