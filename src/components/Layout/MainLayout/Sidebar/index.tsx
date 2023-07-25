@@ -58,7 +58,7 @@ const Sidebar: React.FC<SidebarProps> = (props) => {
 					ModalProps={{ keepMounted: true }}
 					color="inherit"
 				>
-					<p>Navigation Bar</p>
+					<p>Sidebar</p>
 				</Drawer>
 			</Box>
 		</>
