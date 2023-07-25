@@ -23,9 +23,12 @@ const NavigationBar: React.FC<NavigationBarProps> = (props) => {
 				sx={{
 					top: 0,
 					height: uiConfig.navigationBar.height,
+					display: "flex",
+					flexDirection: "row",
+					alignItems: "center",
 				}}
 			>
-				<Toolbar>
+				<Toolbar sx={{ flex: 1 }}>
 					<IconButton
 						size="large"
 						edge="start"
