@@ -21,7 +21,7 @@ const appThemes = (uiState: UIStateType): Record<ThemeType, ThemeOptions> => {
 const setupTheme = (uiState: UIStateType) => {
 	const theme = createTheme({
 		...appThemes(uiState)[uiState.appTheme],
-		components: componentOverride(uiState.customization),
+		components: componentOverride(uiState),
 	});
 
 	return theme;

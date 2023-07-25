@@ -1,7 +1,12 @@
-import { AppThemeColorPaletteType } from "./palette";
+const setupAppThemeColorPalette = () => {
+	const colorPalette = {};
 
-const AppThemeColorPalette: AppThemeColorPaletteType = {
-	palette: {},
+	return colorPalette;
 };
+
+type ThemeColorPaletteType = ReturnType<typeof setupAppThemeColorPalette>;
+
+const AppThemeColorPalette: ThemeColorPaletteType =
+	setupAppThemeColorPalette() as unknown as ThemeColorPaletteType;
 
 export default AppThemeColorPalette;

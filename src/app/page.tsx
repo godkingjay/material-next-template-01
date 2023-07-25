@@ -1,4 +1,15 @@
-import { Box, Button, Paper } from "@mui/material";
+import {
+	Box,
+	Button,
+	List,
+	ListItemButton,
+	ListItemIcon,
+	ListItemText,
+	Paper,
+} from "@mui/material";
+import { GoHome } from "react-icons/go";
+import { HiOutlineUser } from "react-icons/hi";
+import { IoSettingsOutline } from "react-icons/io5";
 import React from "react";
 
 export default function Home() {
@@ -46,6 +57,41 @@ export default function Home() {
 								p: 8,
 							}}
 						></Box>
+					</Paper>
+				</Box>
+				<Box
+					sx={{
+						display: "flex",
+						flexDirection: "row",
+						alignItems: "center",
+						gap: "1rem",
+					}}
+				>
+					<Paper>
+						<List
+							sx={{
+								px: 1,
+							}}
+						>
+							<ListItemButton>
+								<ListItemIcon>
+									<GoHome />
+								</ListItemIcon>
+								<ListItemText>Item Button 1</ListItemText>
+							</ListItemButton>
+							<ListItemButton>
+								<ListItemIcon>
+									<HiOutlineUser />
+								</ListItemIcon>
+								<ListItemText>Item Button 2</ListItemText>
+							</ListItemButton>
+							<ListItemButton>
+								<ListItemIcon>
+									<IoSettingsOutline />
+								</ListItemIcon>
+								<ListItemText>Item Button 3</ListItemText>
+							</ListItemButton>
+						</List>
 					</Paper>
 				</Box>
 			</Box>
