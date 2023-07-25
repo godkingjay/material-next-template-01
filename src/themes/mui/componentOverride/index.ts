@@ -2,6 +2,7 @@ import { ThemeOptions } from "@mui/material";
 import { UIStateType } from "@/redux/reducers/uiStateReducer";
 
 import appThemeColorPalette from "../palette";
+import { grey, red } from "@mui/material/colors";
 
 const componentOverride = (uiState: UIStateType): ThemeOptions["components"] => {
 	const { appTheme } = uiState;
@@ -69,6 +70,41 @@ const componentOverride = (uiState: UIStateType): ThemeOptions["components"] => 
 						fontSize: "0.875rem",
 						color: "inherit",
 					},
+				},
+			},
+		},
+		MuiInputBase: {
+			styleOverrides: {
+				input: {
+					color: grey["800"],
+
+					"&::placeholder": {
+						fontSize: "0.875rem",
+					},
+				},
+			},
+		},
+		MuiOutlinedInput: {
+			styleOverrides: {
+				input: {
+					fontWeight: 500,
+					padding: "15.5px 14px",
+					borderRadius: uiState.customization.borderRadius + "px",
+					"&.MuiInputBase-inputSizeSmall": {
+						padding: "10px 14px",
+						"&.MuiInputBase-inputAdornedStart": {
+							paddingLeft: 0,
+						},
+					},
+				},
+				inputAdornedStart: {
+					paddingLeft: 4,
+				},
+				multiline: {
+					padding: 1,
+				},
+				notchedOutline: {
+					borderRadius: uiState.customization.borderRadius + "px",
 				},
 			},
 		},

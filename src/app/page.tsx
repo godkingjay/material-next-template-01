@@ -6,6 +6,7 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Paper,
+	TextField,
 } from "@mui/material";
 import { GoHome } from "react-icons/go";
 import { HiOutlineUser } from "react-icons/hi";
@@ -232,6 +233,49 @@ export default function Home() {
 							</ListItemButton>
 						</List>
 					</Paper>
+				</Box>
+				<Box
+					sx={{
+						display: "flex",
+						flexDirection: "row",
+						alignItems: "center",
+						gap: "1rem",
+						p: 2,
+					}}
+				>
+					<TextField label="Input 1" />
+					<TextField
+						label="Input 1"
+						placeholder="Placeholder"
+						variant="filled"
+					/>
+					<TextField
+						label="Input 1"
+						placeholder="Placeholder"
+						variant="standard"
+					/>
+				</Box>
+				<Box
+					sx={{
+						display: "flex",
+						flexDirection: "row",
+						alignItems: "center",
+						gap: "1rem",
+						backgroundColor: "black",
+						p: 2,
+					}}
+				>
+					<TextField label="Input 1" />
+					<TextField
+						label="Input 1"
+						placeholder="Placeholder"
+						variant="filled"
+					/>
+					<TextField
+						label="Input 1"
+						placeholder="Placeholder"
+						variant="standard"
+					/>
 				</Box>
 			</Box>
 		</>
