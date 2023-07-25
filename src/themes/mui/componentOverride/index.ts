@@ -4,6 +4,8 @@ import { UIStateType } from "@/redux/reducers/uiStateReducer";
 import appThemeColorPalette from "../palette";
 
 const componentOverride = (uiState: UIStateType): ThemeOptions["components"] => {
+	const { appTheme } = uiState;
+
 	return {
 		MuiButton: {
 			styleOverrides: {
@@ -18,6 +20,7 @@ const componentOverride = (uiState: UIStateType): ThemeOptions["components"] => 
 			styleOverrides: {
 				root: {
 					borderRadius: uiState.customization.borderRadius + "px",
+					overflow: "hidden",
 				},
 			},
 		},
@@ -28,7 +31,7 @@ const componentOverride = (uiState: UIStateType): ThemeOptions["components"] => 
 					fontSize: "18px",
 					paddingBlock: "8px",
 					paddingInline: "20px",
-					color: appThemeColorPalette.palette.MuiListItemButton["dark"].color,
+					color: appThemeColorPalette.palette.MuiListItemButton[appTheme].color,
 
 					"&:focus": {
 						backgroundColor:
