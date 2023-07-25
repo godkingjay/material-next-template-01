@@ -27,15 +27,122 @@ export default function Home() {
 			>
 				<Box
 					sx={{
-						display: "flex",
-						flexDirection: "row",
-						alignItems: "center",
 						gap: "1rem",
+						display: "grid",
+						gridTemplateColumns: "repeat(3, 1fr)",
 					}}
 				>
 					<Button variant="contained">Button</Button>
 					<Button variant="outlined">Button</Button>
 					<Button variant="text">Button</Button>
+					<Button
+						variant="contained"
+						color="secondary"
+					>
+						Button
+					</Button>
+					<Button
+						variant="outlined"
+						color="secondary"
+					>
+						Button
+					</Button>
+					<Button
+						variant="text"
+						color="secondary"
+					>
+						Button
+					</Button>
+					<Button
+						variant="contained"
+						color="success"
+					>
+						Button
+					</Button>
+					<Button
+						variant="outlined"
+						color="success"
+					>
+						Button
+					</Button>
+					<Button
+						variant="text"
+						color="success"
+					>
+						Button
+					</Button>
+					<Button
+						variant="contained"
+						color="warning"
+					>
+						Button
+					</Button>
+					<Button
+						variant="outlined"
+						color="warning"
+					>
+						Button
+					</Button>
+					<Button
+						variant="text"
+						color="warning"
+					>
+						Button
+					</Button>
+					<Button
+						variant="contained"
+						color="error"
+					>
+						Button
+					</Button>
+					<Button
+						variant="outlined"
+						color="error"
+					>
+						Button
+					</Button>
+					<Button
+						variant="text"
+						color="error"
+					>
+						Button
+					</Button>
+					<Button
+						variant="contained"
+						color="info"
+					>
+						Button
+					</Button>
+					<Button
+						variant="outlined"
+						color="info"
+					>
+						Button
+					</Button>
+					<Button
+						variant="text"
+						color="info"
+					>
+						Button
+					</Button>
+					<Button
+						variant="contained"
+						color="inherit"
+					>
+						Button
+					</Button>
+					<Button
+						variant="outlined"
+						color="inherit"
+					>
+						Button
+					</Button>
+					<Button
+						variant="text"
+						color="inherit"
+					>
+						Button
+					</Button>
 				</Box>
 				<Box
 					sx={{
