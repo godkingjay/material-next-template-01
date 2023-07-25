@@ -3,6 +3,7 @@ import React from "react";
 import type { Metadata } from "next";
 import ReduxProvider from "@/providers/ReduxProvider";
 import MaterialUIProvider from "@/providers/MaterialUIProvider";
+import MainLayout from "@/components/Layout/MainLayout";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -14,7 +15,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang="en">
 			<body>
 				<ReduxProvider>
-					<MaterialUIProvider>{children}</MaterialUIProvider>
+					<MaterialUIProvider>
+						<MainLayout>{children}</MainLayout>
+					</MaterialUIProvider>
 				</ReduxProvider>
 			</body>
 		</html>

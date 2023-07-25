@@ -1,12 +1,24 @@
 import { blue, grey } from "@mui/material/colors";
-import { AppThemeColorPaletteType } from "./palette";
 import { alpha } from "@mui/material";
+import { AppColorsType } from "./palette";
+import { ButtonColorType } from "./types/button";
 
 export const commonColors = {
 	text: {
 		light: grey["900"],
 		dark: grey["500"],
 	},
+};
+
+export type AppThemeColorPaletteType = {
+	colors: AppColorsType;
+	palette: {
+		MuiListItemButton: {
+			root: ButtonColorType;
+			light: ButtonColorType;
+			dark: ButtonColorType;
+		};
+	};
 };
 
 const setupAppThemeColorPalette = (): AppThemeColorPaletteType => {

@@ -3,6 +3,9 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export type UIStateType = {
 	appTheme: ThemeType;
+	navigation: {
+		sidebarOpen: boolean;
+	};
 	customization: {
 		borderRadius: number;
 	};
@@ -10,6 +13,9 @@ export type UIStateType = {
 
 const initialState: UIStateType = {
 	appTheme: "light",
+	navigation: {
+		sidebarOpen: false,
+	},
 	customization: {
 		borderRadius: 8,
 	},
@@ -28,9 +34,23 @@ const uiStateSlice = createSlice({
 		) => {
 			state.customization.borderRadius = action.payload;
 		},
+		setSidebarOpen: (
+			state,
+			action: PayloadAction<UIStateType["navigation"]["sidebarOpen"]>
+		) => {
+			state.navigation.sidebarOpen = action.payload;
+		},
+		toggleSidebarOpen: (state) => {
+			state.navigation.sidebarOpen = !state.navigation.sidebarOpen;
+		},
 	},
 });
 
-export const { setAppTheme, setBorderRadius } = uiStateSlice.actions;
+export const {
+	setAppTheme,
+	setBorderRadius,
+	setSidebarOpen,
+	toggleSidebarOpen,
+} = uiStateSlice.actions;
 
 export default uiStateSlice.reducer;

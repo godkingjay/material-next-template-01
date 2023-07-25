@@ -8,6 +8,13 @@ const componentOverride = (uiState: UIStateType): ThemeOptions["components"] => 
 	const { appTheme } = uiState;
 
 	return {
+		MuiAppBar: {
+			styleOverrides: {
+				root: {
+					borderRadius: 0,
+				},
+			},
+		},
 		MuiButton: {
 			styleOverrides: {
 				root: {
